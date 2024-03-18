@@ -1,0 +1,107 @@
+1b)
+//draw a coordinate axis at the center of the screen.
+#include<stdio.h>
+#include<conio.h>
+#include<graphic.h>
+void main()
+{
+  int gd=DETECT,gm;
+int midx,midy;
+initgraph(&gd,&gm,"\\TURBOC3\\bgi");
+cleardevice();
+midx=getmaxx()/2;
+midy=getmaxy()/2;
+
+line(1,midy,640,midy);
+line(midx,1,midx,480);
+getch()
+}
+
+
+2aa//divide your screen into four region draw a circle rectangle,ellipse,and half ellipse in each
+region with appropriate message
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+void main()
+{
+	int gd=DETECT,gm;
+	int midx,midy;
+	initgraph(&gd,&gm,"C:\\TURBOC3\\bgi");
+	cleardevice();
+	midx=getmaxx()/2;
+	midy=getmaxy()/2;
+	
+	line(1,midy,640,midy);
+	line(midx,1,midx,480);
+	setcolor(RED);
+	circle(midx+(-150),midy-(120),40);
+	printf("\t\t IT is a circle");
+	setcolor(GREEN);
+	rectangle(midx+(100),midy-(100),midx+(200),midy-(150));
+	printf("\t\t\t\tThis is Rectangle\n\n\n\n");
+	setcolor(BLUE);
+	ellipse(midx+(-150),midy-(-100),0,360,midx+(-250),midy-(200));
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\t wow!!Its is an ellipse");
+	setcolor(YELLOW);
+	ellipse(midx+(180),midy-(-100),180,0,midx+(-200),midy-(150));
+	print("\t\t\t ohh! half ellipse");
+	getch();
+}
+
+
+2b)  Aim:-   Draw a simple hut on the screen.  
+Code:-  #include<stdio.h>  
+#include<conio.h>  
+#include<graphics.h>  
+int main()  
+{  
+      clrscr(); 
+      int gd=DETECT, gm; 
+        initgraph(&gd,&gm,=C:\TC\BIN=);  
+          setcolor(WHITE);  
+          rectangle(150,180,250,300);  
+      rectangle(250,180,420,300); 
+      rectangle(180,250,220,300); 
+    line(200,100,150,180); 
+    line(200,100,250,180); 
+      line(200,100,370,100);  
+        line(370,100,420,180);  
+        setfillstyle(SOLID_FILL,RED); 
+        floodfill(152,182,WHITE);  
+        floodfill(252,182,WHITE);  
+          setfillstyle(SLASH_FILL,BLUE); 
+            floodfill(182,252,WHITE);  
+            stylefillstyle(HATCH_FILL,GREEN);  
+                floodfill(200,105,WHITE); 
+              floodfill(210,105,WHITE); 
+              getch();  
+            closegraph(); 
+              return 0;
+}
+
+
+//draw the following basic shapes in the center of the screen.
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+void main()
+{
+	int gd=DETECT,gm;
+	int midx,midy;
+	initgraph(&gd,&gm,"C:\\TURBOC3\\bgi");
+	cleardevice();
+	
+	rectangle(120,150,230,200);
+	circle(x,y,radius);
+	
+	bar(left+300,top,right+300,buttom);
+	line(left-10,top+150,left+410,top+150);
+	
+	ellipse(x,y+200,0,360,80,50);
+	for(radius=25;radius <=100; radius=radius+20)
+	circle(500,350,radius);
+	getch();
+	closegraph();
+}
+	
